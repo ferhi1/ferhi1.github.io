@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Progression Prediction</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Prism.js for syntax highlighting -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+</head>
+<body>
+
+<header>
+    <h1>Diabetes Progression Prediction</h1>
+</header>
+
+<section>
+    <h2>Project Overview</h2>
+    <p>This project aims to predict diabetes progression in patients using machine learning models based on clinical measurements. 
+       The goal is to estimate disease progression one year after baseline assessment.</p>
+</section>
+
+<section>
+    <h2>Dataset</h2>
+    <p>The project uses the <strong>Diabetes dataset</strong> from scikit-learn. This dataset contains information collected from 442 patients, with the following details:</p>
+    <ul>
+        <li><strong>Features:</strong> Age, Sex, BMI, Blood Pressure, and six blood serum measurements (s1 to s6)</li>
+        <li><strong>Target:</strong> Quantitative measure of disease progression one year after baseline</li>
+        <li><strong>Number of samples:</strong> 442</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Models Used</h2>
+    <p>Three machine learning models were implemented to predict diabetes progression:</p>
+    <ul>
+        <li><strong>Linear Regression:</strong> Basic linear approach for continuous prediction.</li>
+        <li><strong>Ridge Regression:</strong> Linear model with L2 regularization (alpha=0.001) to reduce overfitting.</li>
+        <li><strong>RandomForestRegressor:</strong> Ensemble model (n_estimators=500, max_depth=10) to capture non-linear relationships and interactions.</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Results</h2>
+    <p>The performance of the models was measured using the R² score on the test set:</p>
+    <ul>
+        <li><strong>Linear Regression:</strong> R² = 0.516</li>
+        <li><strong>Ridge Regression:</strong> R² = 0.517</li>
+        <li><strong>RandomForest Regressor:</strong> R² = 0.534</li>
+    </ul>
+    <p>The RandomForest model achieved the best performance, indicating that ensemble methods can better capture the complex patterns in the dataset.</p>
+</section>
+
+<section>
+    <h2>Python Code Example</h2>
+    <pre><code class="language-python">
+from sklearn.datasets import load_diabetes
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression, Ridge
+from sklearn.ensemble import RandomForestRegressor
+
+# Load dataset
+diabetes = load_diabetes()
+X = diabetes.data
+y = diabetes.target
+
+# Split data
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=55)
+
+# Linear Regression
+lr = LinearRegression()
+lr.fit(X_train, y_train)
+print("Linear Regression R²:", lr.score(X_test, y_test))
+
+# Ridge Regression
+ridge = Ridge(alpha=0.001)
+ridge.fit(X_train, y_train)
+print("Ridge Regression R²:", ridge.score(X_test, y_test))
+
+# RandomForest
+rf = RandomForestRegressor(n_estimators=500, max_depth=10, random_state=55)
+rf.fit(X_train, y_train)
+print("RandomForest R²:", rf.score(X_test, y_test))
+    </code></pre>
+</section>
+
+<section>
+    <h2>Insights & Next Steps</h2>
+    <ul>
+        <li>Feature importance analysis can help identify which factors most influence diabetes progression.</li>
+        <li>Hyperparameter tuning and cross-validation may improve model performance further.</li>
+        <li>Future work could include using more advanced models such as Gradient Boosting or Neural Networks.</li>
+    </ul>
+</section>
+
+<section>
+    <a href="index.html">← Back to Portfolio</a>
+</section>
+
+<!-- Prism.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+
+</body>
+</html>

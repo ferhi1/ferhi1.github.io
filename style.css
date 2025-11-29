@@ -88,3 +88,19 @@ footer {
     margin-top: 40px;
     font-size: 1em;
 }
+
+section {
+    padding: 20px 20px; /* قلل padding العلوي والسفلي */
+    margin: 0 auto;      /* تأكد أن margin علوي وسفلي صفر */
+    max-width: 900px;
+}
+
+section h2 {
+    margin-top: 0;       /* إزالة الفراغ أعلى العنوان */
+    margin-bottom: 15px; /* تقليل الفراغ أسفل العنوان */
+}
+
+section p, section ul {
+    margin-bottom: 15px; /* تقليل الفراغ أسفل الفقرات والقوائم */
+}
+
