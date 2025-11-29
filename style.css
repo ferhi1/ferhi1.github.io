@@ -104,3 +104,35 @@ section p, section ul {
     margin-bottom: 15px; /* تقليل الفراغ أسفل الفقرات والقوائم */
 }
 
+/* Code Block Styling */
+.code-block {
+    background-color: #1e1e1e; /* أسود داكن */
+    color: #dcdcdc;           /* نص فاتح */
+    padding: 20px;
+    border-radius: 8px;
+    overflow-x: auto;          /* تمرير أفقي للكود الطويل */
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.9em;
+    margin-bottom: 40px;       /* مسافة بين الأقسام */
+}
+
+.code-block code {
+    white-space: pre;          /* يحافظ على الفراغات والتنسيق */
+}
+table {
+    width: 100%;
+    border-collapse: collapse; /* يزيل المسافات المزدوجة بين الحدود */
+    margin-bottom: 40px;      /* مسافة بين الجدول والأقسام الأخرى */
+}
+
+th, td {
+    border: 1px solid #ccc;   /* حدود خفيفة */
+    padding: 12px 15px;       /* المسافة داخل الخلايا */
+    text-align: left;
+}
+
+th {
+    background-color: #0a74da; /* خلفية زرقاء للرأس */
+    color: white;
+}
+
