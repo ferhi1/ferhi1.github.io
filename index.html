@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferhi Ibrahim - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #0a74da;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        header p {
+            font-size: 1.1em;
+        }
+        section {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+        h2 {
+            color: #0a74da;
+            margin-bottom: 20px;
+        }
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .project-card {
+            background-color: white;
+            padding: 20px;
+            flex: 1 1 300px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            transition: transform 0.2s;
+        }
+        .project-card:hover {
+            transform: scale(1.03);
+        }
+        .project-card h3 {
+            margin-top: 0;
+        }
+        footer {
+            background-color: #0a74da;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        a {
+            color: #0a74da;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Ferhi Ibrahim</h1>
+    <p>Machine Learning | Cybersecurity | AI Automation</p>
+    <p>I build projects that solve real problems and improve my skills.</p>
+</header>
+
+<section>
+    <h2>Projects</h2>
+    <div class="projects">
+        <div class="project-card">
+            <h3>Diabetes Progression Prediction</h3>
+            <p>Predicting diabetes progression using Linear Regression, Ridge, and RandomForest. R² ~ 0.53</p>
+        </div>
+        <div class="project-card">
+            <h3>Iris Classification</h3>
+            <p>Classic classification problem using SVM and RandomForest models.</p>
+        </div>
+        <div class="project-card">
+            <h3>Customer Churn Prediction</h3>
+            <p>Predicting customer churn with logistic regression and RandomForest.</p>
+        </div>
+        <div class="project-card">
+            <h3>Vulnerability Scanning (Kali Linux)</h3>
+            <p>Using Nikto and Nmap for basic vulnerability scanning on local servers.</p>
+        </div>
+        <div class="project-card">
+            <h3>Automated Social Media Posts</h3>
+            <p>Python script using OpenAI API to generate automated social media content.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:ferhi@example.com">ferhi@example.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/ferhiibrahim" target="_blank">linkedin.com/in/ferhiibrahim</a></p>
+    <p>GitHub: <a href="https://github.com/ferhiibrahim" target="_blank">github.com/ferhiibrahim</a></p>
+</section>
+
+<footer>
+    &copy; 2025 Ferhi Ibrahim
+</footer>
+
+</body>
+</html>
